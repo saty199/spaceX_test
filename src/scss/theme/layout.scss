@@ -1,0 +1,31 @@
+main {
+	max-width: 1440px;
+	margin: auto;
+	padding: 15px;
+
+	.layoutContainer {
+		margin-top: 20px;
+		
+		aside{
+			margin-bottom:10px;
+		}
+
+		@include bp(md-min) {
+			display: flex;
+
+			aside {
+				width: 240px;
+				margin:0px 15px 0 0;
+			}
+
+			.programSection {
+				width: calc(100% - 240px);
+			}
+		}
+	}
+
+	footer{
+		margin-top:30px;
+		text-align: center;
+	}
+}

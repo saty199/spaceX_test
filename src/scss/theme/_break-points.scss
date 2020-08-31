@@ -1,0 +1,17 @@
+
+//Break points
+@mixin bp($point) {
+    $md-min: "(min-width: 700px)";
+    $lg-min: "(min-width: 1024px)";
+  
+    @if $point==md-min {
+      @media #{$md-min} {
+        @content;
+      }
+    }@else if $point==lg-min{
+      @media #{$lg-min} {
+        @content;
+      }
+    }
+  }
+  

@@ -1,0 +1,51 @@
+.filterContainer {
+	padding:20px;
+	
+    h5{
+    margin:20px 0 10px 0;
+    text-align:center;
+    border-bottom:1px solid rgba(0, 0, 0, 0.603);
+    padding-bottom:5px;
+    }
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			width: 50%;
+			text-align: center;
+			margin: 4px 0px;
+
+			&:nth-child(even) {
+				text-align: right;
+			}
+
+			&:nth-child(odd) {
+				text-align: left;
+			}
+
+			label {
+				display: inline-block;
+				background: $light-green-color;
+				padding: 5px;
+				border-radius: 5px;
+				min-width: 80px;
+				text-align: center;
+				cursor:pointer;
+				box-shadow:0px 0px 3px rgba(29, 29, 29, 0.071);
+			}
+			[type="radio"] {
+				display: none;
+				&:checked {
+					+ {
+						label {
+							background: $green-color;
+							cursor:default;
+							font-weight: 500;
+    						box-shadow: 0px 5px 5px rgba(142, 204, 62, 0.561);
+						}
+					}
+				}
+			}
+		}
+	}
+}
