@@ -19,7 +19,7 @@ const Programs = (props) => {
                                     : ''}
                                 <h5>Lunch Year: <span>{program.launch_year}</span> </h5>
                                 <h5>Successful Launch: <span>{program.launch_success ? "true" : "false"}</span></h5>
-                                <h5>Successful Landing: <span>{program.launch_landing ? "true" : "false"}</span></h5>
+                                <h5>Successful Landing: <span>{program.rocket?.first_stage?.cores[0]?.land_success ? "true" : "false"}</span></h5>
                             </div>
                         </div>)}
                 </div>
